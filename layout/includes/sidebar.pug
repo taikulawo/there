@@ -2,6 +2,7 @@
     if is_post()
         .toggle-info
             span Toggle Site
+        hr
         .sidebar-toc
             !=toc(page.content, {list_number: true})
     .site-info(style=is_post() ? 'display:none' : '')

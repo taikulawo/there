@@ -7,7 +7,7 @@
     }
     @include min-screen($min-middle) {
         & {
-            width: 768px;
+            // width: 768px;
             margin: 0 auto;
         }
     }
@@ -16,6 +16,12 @@
         .highlight {
             overflow: auto;
         }
+    }
+}
+
+.main{
+    .post-page{
+        transition: all 0.5s ease-out;
     }
 }
 

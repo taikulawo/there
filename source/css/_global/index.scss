@@ -1,7 +1,3 @@
-ul {
-    list-style: none;
-}
-
 body {
     display: flex;
     flex-direction: column;
@@ -12,7 +8,16 @@ body {
     font-family: Lato, Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
-@include max-screen($min-middle) {
+ul {
+    list-style: none;
+}
+
+.post-container img{
+    width: 60%;
+}
+
+
+@include max-screen($max-middle) {
     .padding-left {
         padding-left: 0 !important;
     }
@@ -25,16 +30,19 @@ body {
     cursor: default;
     font-size: 1.6rem;
     z-index: 100;
+    transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
     &:hover {
         color: $sky-blue;
-        transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    @include max-screen($min-middle){
+        left: -16px;
     }
 }
 
 #go-up{
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 0px;
     font-size: 1.6rem;
     cursor: default;
     transition: color .5s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -70,13 +78,16 @@ html {
 }
 
 .very-big{
-    font-size: 50px;
+    font-size: 37px;
 }
 .very-strong{
     font-weight: bold;
 }
 .post-header{
     margin-bottom: -34px;
+}
+.index-heading{
+    font-size: 50px;
 }
 
 
@@ -91,7 +102,9 @@ $h-init: 30px;
 
 @include max-screen($min-middle) {
     $h-init: 27px;
-
+    .very-big{
+        font-size: 20px;
+    }
     .very-strong{
         font-weight: bold;
     }

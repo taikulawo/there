@@ -12,9 +12,11 @@ mixin post(post)
                 else
                     .post-content!=post.content
     else
-        .post-container
-            .post-content!=post.content
-            .post-meta
-                include ../components/post-tag.pug
-                include ../utils/pagination.pug
-            include ../comment.pug
+        .container.post-container
+            .row.justify-content-center
+                .col-xl-9.col-lg-9.col-md-10.col-sm-12.col-xs-12
+                    .post-content!=post.content
+                    .post-meta
+                        include ../components/post-tag.pug
+                        include ../utils/pagination.pug
+                    include ../comment.pug

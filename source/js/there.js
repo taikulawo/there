@@ -36,6 +36,7 @@ $(function () {
     let sidebar = $('.sidebar')
     let body = $('body')
     let index = $('.index-posts')
+    let postPage = $('.post-page')
     $.fn.replaceClass = function(src,dst){
       $(this).hasClass(src) ? 
          $(this).removeClass(src).addClass(dst) 
@@ -44,6 +45,7 @@ $(function () {
     }
     $('#toggle-sidebar').on('click',function(){
       index.replaceClass('col-lg-10 col-xl-10','col-lg-8 col-xl-8')
+    //   postPage.replaceClass('col-lg-10 col-xl-10','col-lg-8 col-xl-8')
       if(sidebar.is(":visible")){
         sidebar.toggleClass("sidebar-open")
         if(sidebar.hasClass("sidebar-open")){
@@ -83,6 +85,20 @@ $(function () {
     })
   })
   
+  (function(){
+    let toggleSite = $(".toggle-info")
+    let siteInfo = $(".site-info")
+    let siteToc = $(".sidebar-toc")
+    toggleSite.on("click",function(){
+        if (siteInfo.css("display") === "none"){
+            siteInfo.show()
+            siteToc.hide()
+            return
+        }
+        siteInfo.hide()
+        siteToc.show()
+    })
+  }());
   
   $(window).trigger("resize")
 
