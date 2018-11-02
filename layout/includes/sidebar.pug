@@ -1,0 +1,20 @@
+.sidebar
+    if is_post()
+        .toggle-info
+            span Toggle Site
+        .sidebar-toc
+            !=toc(page.content, {list_number: true})
+    .site-info(style=is_post() ? 'display:none' : '')
+        .author-info
+            .avatar
+                img(src=theme.avatar)
+            span.author=theme.author
+            span.author-description=theme.author_description
+        hr
+        .publish-info
+            a.posts(href="/archives")
+                span Articles
+                span.counts=site.posts.length
+            a.tags(href="/archives")
+                span Tags
+                span.counts=site.tags.length

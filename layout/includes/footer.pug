@@ -1,0 +1,11 @@
+-
+    var themeName = "there"
+    var author = theme.author
+footer.footer
+    .social-links
+        each item in theme["social-links"]
+            - var [it] = Object.keys(item)
+            - item = item[it]
+            i(class=item.icon)
+                a(href=item.url)
+    .site-info #{author} | Theme: #{themeName}

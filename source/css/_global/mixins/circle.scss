@@ -1,0 +1,9 @@
+@mixin circle {
+    position: absolute;
+    content: "";
+    background-color: #ffffff;
+    border: 2.6px solid #49b1f5;
+    border-radius: 15px;
+    width: 1.3rem;
+    height: 1.3rem;
+}

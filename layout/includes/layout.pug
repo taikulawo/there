@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        include ./head.pug
+    body.padding-left
+        i.fa.fa-arrow-right#toggle-sidebar
+        include ./sidebar.pug
+        .main
+            .container-fluid
+                .row
+                    .col-xl-12.col-lg-12.col-md-12.col-xs-12.p-0
+                        block top
+                        block content
+        i.fa.fa-arrow-up#go-up  
+        include ./bottom.pug

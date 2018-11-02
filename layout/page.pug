@@ -1,0 +1,14 @@
+extends ./includes/layout.pug
+
+block top
+    include ./includes/navbar.pug
+    if page.type === "about"
+        include ./includes/components/about.pug
+    else
+        include ./includes/components/index.pug
+
+block content
+    .post-container
+        .post-content!=page.content
+        include ./includes/comments/disqus.pug
+    include ./includes/footer.pug

@@ -1,0 +1,18 @@
+.intro-header {
+    margin-bottom: 20px;
+    background-image: url("/images/backgroundimg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    user-select: none;
+    .site-heading {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 200px 20px;
+        color: #fff;
+        text-align: center;
+    }
+}

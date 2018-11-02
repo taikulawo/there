@@ -1,0 +1,3 @@
+.tags
+    each tag in page.tags.data
+        a.tag(href=queryTag(tag.path))!=tag.name

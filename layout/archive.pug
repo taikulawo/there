@@ -1,0 +1,18 @@
+extends ./includes/layout.pug
+
+block top
+    include ./includes/navbar.pug
+    include ./includes/components/archive.pug
+block content
+    - var global = stringify(site.tags)
+    script var global = !{JSON.stringify(global)}
+    .container
+        .row.justify-content-center
+            .col-lg-10.col-md-10.col-sm-12.col-xs-12.flex-column
+                #tags_cloud
+                include ./includes/footer.pug
+
+append scripts
+    script(src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/vue-router@3.0.1/dist/vue-router.min.js")
+    script(src="/js/archive.js")

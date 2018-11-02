@@ -1,0 +1,9 @@
+extends ./includes/layout.pug
+
+block top
+    include ./includes/navbar.pug
+    include ./includes/components/post.pug
+block content
+    include ./includes/mixins/post.pug
+    +post(page)
+    include ./includes/footer.pug

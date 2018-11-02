@@ -1,0 +1,52 @@
+.post-container {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    @include max-screen($min-middle) {
+        padding: 0 20px;
+    }
+    @include min-screen($min-middle) {
+        & {
+            width: 768px;
+            margin: 0 auto;
+        }
+    }
+    .post-content {
+        font-size: 1.6rem;
+        .highlight {
+            overflow: auto;
+        }
+    }
+}
+
+.index-posts {
+    transition: all 0.5s ease-out;
+    opacity: 0;
+    hr {
+        margin: 3rem 0;
+    }
+    .post-link {
+        text-decoration: none;
+        display: block;
+        color: $black;
+        &:hover {
+            color: $blue;
+        }
+        .post-title {
+            font-weight: bold;
+        }
+    }
+    .post-meta {
+        .date {
+            font-style: italic;
+            font-size: 1.3rem;
+        }
+    }
+    .post-container {
+        margin: 0;
+        padding: 0;
+        .post-content {
+            width: auto;
+        }
+    }
+}

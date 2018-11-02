@@ -1,0 +1,41 @@
+.tag-cloud-view {
+    position: relative;
+    border-left: 2px solid #a4d8fa;
+    padding-left: 2rem;
+    .tag-post {
+        @include flex();
+        @include flex-direction(row);
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 3rem;
+        .post-meta {
+            flex-shrink: 0;
+            .post-date {
+                color: $grey;
+                font-size: 1.4rem;
+            }
+        }
+        a {
+            color: #4c4948;
+            margin-left: 5rem;
+            font-size: 1.8rem;
+            text-decoration: none;
+            flex-grow: 1;
+            cursor: default;
+            &:hover {
+                color: $sky-blue;
+                transition: color .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+            @include underline();
+        }
+        &::before {
+            @include circle;
+            // left: -0.8rem;
+            left: -2.8rem;
+        }
+        &:hover::before {
+            border-color: #ff7242;
+            transition: border-color .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+    }
+}

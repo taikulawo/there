@@ -1,0 +1,27 @@
+.paginator {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 2rem;
+    margin: 40px 0;
+    color: #99a9bf;
+    a {
+        color: inherit;
+        &:hover {
+            color: #49b1f5;
+            transition: color .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+    }
+    .next-post,
+    .next-page {
+        margin-left: auto;
+        span {
+            margin-right: 8px;
+        }
+    }
+    .prev-post span,
+    .prev-page span {
+        margin-left: 8px;
+    }
+}

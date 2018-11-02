@@ -1,0 +1,14 @@
+@mixin flex() {
+    display: flex;
+    display: -webkit-flex;
+}
+
+@mixin flex-direction($direction) {
+    flex-direction: $direction;
+    -ms-flex-direction: $direction;
+}
+
+@mixin flex-wrap($c) {
+    flex-wrap: $c;
+    -ms-flex-wrap: $c;
+}

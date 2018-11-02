@@ -1,0 +1,21 @@
+.post-toc {
+    @include flex();
+    @include flex-direction(column);
+    background-color: #f6f8fa;
+    align-items: flex-start;
+    .toc {
+        list-style: none;
+        padding-left: 0;
+        font-size: 1.8rem;
+        .toc-link {
+            color: #5695c1;
+            cursor: default;
+            &:hover {
+                text-decoration: none;
+                color: $sky-blue;
+                transition: color .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+            @include underline()
+        }
+    }
+}

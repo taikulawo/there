@@ -1,0 +1,12 @@
+.navbar-custom
+    .navbar-wrapper
+        a.navbar-header(href="/")=theme.author
+        ul.menu
+            each url, item in theme.menu
+                li
+                    a(href=url)=item
+        button.navbar-toggle(type="button")
+            span
+            span
+            span
+

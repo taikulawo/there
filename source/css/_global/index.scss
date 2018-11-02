@@ -1,0 +1,109 @@
+ul {
+    list-style: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    color: #4c4948;
+    line-height: 2;
+    font-family: Lato, Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+@include max-screen($min-middle) {
+    .padding-left {
+        padding-left: 0 !important;
+    }
+}
+
+#toggle-sidebar {
+    position: fixed;
+    bottom: 20px;
+    left: 16px;
+    cursor: default;
+    font-size: 1.6rem;
+    z-index: 100;
+    &:hover {
+        color: $sky-blue;
+        transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+}
+
+#go-up{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.6rem;
+    cursor: default;
+    transition: color .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    &:hover{
+        color: $sky-blue;
+    }
+}
+
+::selection {
+    background: #00c4b6;
+    color: #f7f7f7;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b8b8bb;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+html {
+    font-size: 10px;
+}
+
+.hide-item {
+    display: none;
+}
+
+.very-big{
+    font-size: 50px;
+}
+.very-strong{
+    font-weight: bold;
+}
+.post-header{
+    margin-bottom: -34px;
+}
+
+
+$h-init: 30px;
+@for $i from 1 through 6 {
+    h#{$i} {
+        font-size: $h-init;
+        font-weight: bold;
+    }
+    $h-init: $h-init - 3px;
+}
+
+@include max-screen($min-middle) {
+    $h-init: 27px;
+
+    .very-strong{
+        font-weight: bold;
+    }
+    .post-header{
+        margin-bottom: -15px;
+    }
+
+    @for $i from 1 through 6 {
+        h#{$i} {
+            font-size: $h-init;
+            font-weight: bold;
+        }
+        $h-init: $h-init - 3px;
+    }
+}

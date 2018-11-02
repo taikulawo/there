@@ -1,0 +1,101 @@
+.navbar-custom {
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    height: 5.6rem;
+    font-size: 1.8rem;
+    z-index: 100;
+    background-color: transparent;
+    transition: background-color 0.2s ease-in-out;
+    &.navbar-visible{
+        transform: translate3d(0,100%,0);
+        -webkit-transform: translate3d(0, 100%,0);
+    }
+    &.navbar-fixed{
+        position: fixed;
+        top: -5.6rem ;
+        background: rgba(255,255,255,0.8);
+        transition: transform 0.2s ease-in-out;
+        box-shadow: 0 5px 6px -5px rgba(133,133,133,.6);
+        .navbar-header,
+        .menu a{
+            color: #4c4948 !important;
+        }
+    }    
+    .navbar-wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 0 20px;
+        .navbar-header {
+            font-weight: bold;
+            font-size: 2.4rem;
+            color: #fff;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+        .menu {
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+            padding: 0;
+            @include max-screen($min-middle) {
+                & {
+                    display: none;
+                    flex-direction: column;
+                    position: absolute;
+                    padding: 0;
+                    right: 9rem;
+                    top: 6rem;
+                    background-color: $menu-background;
+                    z-index: 100;
+                }
+            }
+            li {
+                font-weight: bold;
+                padding: 0.3rem 2.3rem 0.3rem 0;
+                @include underline();
+                a{
+                    color: #fff;
+                    @include max-screen($min-middle){
+                        color: $menu-font;
+                    }
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .navbar-toggle {
+            display: none;
+            color: $white;
+            background-color: transparent;
+            border-color: transparent;
+            padding: 1.9rem 1.6rem;
+            &:focus {
+                outline: none;
+            }
+            @include max-screen($min-middle) {
+                & {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: stretch;
+                    align-self: center;
+                }
+            }
+            span {
+                width: 18px;
+                height: 2px;
+                display: block;
+                background-color: #fff;
+            }
+            span+span {
+                margin-top: 3px;
+            }
+        }
+    }
+}

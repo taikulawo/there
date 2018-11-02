@@ -1,0 +1,5 @@
+- scripts = theme.scripts
+if scripts && scripts.length > 0
+    each item in scripts
+        script(src=item)
+    block scripts

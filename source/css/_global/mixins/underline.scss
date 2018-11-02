@@ -1,0 +1,25 @@
+@mixin underline() {
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background-color: #80c8f8;
+        transition: width .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    &:hover {
+        &::after {
+            width: 100%;
+        }
+    }
+    &:active {
+        &::after {
+            width: 100%;
+        }
+    }
+    & {
+        position: relative;
+    }
+}

@@ -1,0 +1,12 @@
+#post-header{
+    margin-right: auto;
+    .tag{
+        border: 1px solid #fafdff;
+        color: #f8fafb;
+        background-color: transparent;
+        &:hover{
+            background-color: #336998;
+            transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+    }
+}

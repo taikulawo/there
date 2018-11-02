@@ -1,0 +1,6 @@
+- var stylesheets = theme.stylesheets
+link(rel="dns-prefetch" href="https://cdn.jsdelivr.net")
+title=theme.title
+if stylesheets && stylesheets.length > 0 
+    each item in theme.stylesheets
+        link(rel="stylesheet" href=item)

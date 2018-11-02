@@ -1,0 +1,16 @@
+extends ./includes/layout.pug
+
+block top
+    include ./includes/navbar.pug
+    include ./includes/components/index.pug
+
+block content
+    - var per_page = config.index_generator.per_page
+        include ./includes/mixins/post.pug
+        .row.justify-content-center.m-0
+            .col-xl-8.col-lg-8.col-md-10.col-xs-12.index-posts
+                each item in page.posts.sort("date",-1).limit(per_page).toArray()
+                    +post(item)
+                    hr
+                include ./includes/utils/pagination.pug
+        include ./includes/footer.pug

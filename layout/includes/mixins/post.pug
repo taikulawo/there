@@ -1,0 +1,20 @@
+- var dateFmt = config.data_format || "YYYY-MM-DD"
+mixin post(post)
+    if is_home()
+        .index-post
+            a.post-link(href=url_for(post.path))
+                h1.post-title!=post.title
+                .post-meta 
+                    .date=date(post.date, dateFmt)
+            .post-container
+                if post.excerpt
+                    .post-content!=post.excerpt
+                else
+                    .post-content!=post.content
+    else
+        .post-container
+            .post-content!=post.content
+            .post-meta
+                include ../components/post-tag.pug
+                include ../utils/pagination.pug
+            include ../comment.pug
