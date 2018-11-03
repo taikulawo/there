@@ -13,7 +13,8 @@ ul {
 }
 
 .post-container img{
-    width: 60%;
+    width: 100%;
+
 }
 
 
@@ -34,7 +35,7 @@ ul {
     &:hover {
         color: $sky-blue;
     }
-    @include max-screen($min-middle){
+    @include max-screen($max-middle){
         left: -16px;
     }
 }
@@ -78,7 +79,11 @@ html {
 }
 
 .very-big{
-    font-size: 37px;
+    font-size: 50px;
+}
+.little-big{
+    font-size: 30px;
+    font-weight: 300;
 }
 .very-strong{
     font-weight: bold;
@@ -103,7 +108,11 @@ $h-init: 30px;
 @include max-screen($min-middle) {
     $h-init: 27px;
     .very-big{
+        font-size: 30px;
+    }
+    .little-big{
         font-size: 20px;
+        font-weight: 300;
     }
     .very-strong{
         font-weight: bold;

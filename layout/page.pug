@@ -8,7 +8,10 @@ block top
         include ./includes/components/index.pug
 
 block content
-    .post-container
-        .post-content!=page.content
-        include ./includes/comments/disqus.pug
+    .container
+        .row.justify-content-center
+            .col-xl-10.col-lg-10.col-md-10-col-sm-12.col-xs-12
+                .post-container
+                    .post-content!=page.content
+                    include ./includes/comments/disqus.pug
     include ./includes/footer.pug

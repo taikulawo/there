@@ -10,33 +10,32 @@ menu:
 
 author_description: Here
 
-avatar: /images/avatar.png
-
+avatar: /imgs/avatar.png
 
 since:
-    enable: true
+    enable: flase
     from: 2016
 
     
 # if icon is ~, use text instead
 social-links:
-  - weibo:
-      url: "//testurl.com"
-      icon: "fa fa-weibo"
-  - mail:
-      url: "//testurl.com"
-      icon: "fa fa-envelope"
-  - github:
-      url: "//testurl.com"
-      icon: "fa fa-github"
+  # - weibo:
+  #     url: "//testurl.com"
+  #     icon: "fa fa-weibo"
+  # - mail:
+  #     url: "//testurl.com"
+  #     icon: "fa fa-envelope"
+  # - github:
+  #     url: "//testurl.com"
+  #     icon: "fa fa-github"
     
 disqus:
-    enable: true
-    shortname: chaochaogege
+    enable: false
+    #shortname: yourname
     #count:
 
 # Miscelaneous
-favicon: /favicon.ico
+favicon: /there-favicon.ico
 
 # stylesheets loaded in the <head>
 stylesheets:

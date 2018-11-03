@@ -1,6 +1,7 @@
 - var stylesheets = theme.stylesheets
 link(rel="dns-prefetch" href="https://cdn.jsdelivr.net")
 title=theme.title
+link(rel="shortcut icon" href=theme.favicon)
 if stylesheets && stylesheets.length > 0 
     each item in theme.stylesheets
         link(rel="stylesheet" href=item)

@@ -3,17 +3,18 @@
     var author = theme.author
 footer.footer
     .social-links
-        each item in theme["social-links"]
-            - var [it] = Object.keys(item)
-            - item = item[it]
-            i(class=item.icon)
-                a(href=item.url)
+        if theme["social-links"] !== null
+            each item in theme["social-links"]
+                - var [it] = Object.keys(item)
+                - item = item[it]
+                i(class=item.icon)
+                    a(href=item.url)
     if theme.since.enable
         .copyright!="&copy; " + theme.since.from + " - " + new Date().getFullYear() + " By " + config.author
     else
         .copyright!="&copy;" + "By " + config.author
     .theme-info!="Powered By "
-        a(href="https://hexo.io") Hexo
+        a(href="https://hexo.io") Hexo 
         span.split | 
-        span Theme-
+        span Theme- 
         a(href="https://github.com/iamwwc/there") There

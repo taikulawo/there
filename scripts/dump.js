@@ -1,3 +1,4 @@
+// used when debug
 var fs = require("fs")
 hexo.extend.helper.register("dump",function(d,path){
     fs.writeFileAsync(d,path)
