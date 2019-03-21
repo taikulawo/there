@@ -4,7 +4,7 @@ block top
     include ./includes/navbar.pug
     include ./includes/components/archive.pug
 block content
-    - var global = stringify(site.tags)
+    - var global = stringify(site.posts)
     script var global = !{JSON.stringify(global)}
     .container
         .row.justify-content-center

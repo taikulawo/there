@@ -26,6 +26,9 @@
 }
 
 .index-posts {
+	@include min-screen($min-middle) {
+        min-width: 800px;
+    }
     transition: all 0.5s ease-out;
     opacity: 0;
     hr {

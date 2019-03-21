@@ -44,7 +44,7 @@ $(function () {
                 $(this).removeClass(dst).addClass(src)
         }
         $('#toggle-sidebar').on('click', function () {
-            index.replaceClass('col-lg-10 col-xl-10', 'col-lg-8 col-xl-8')
+            // index.replaceClass('col-lg-10 col-xl-10', 'col-lg-8 col-xl-8')
             //   postPage.replaceClass('col-lg-10 col-xl-10','col-lg-8 col-xl-8')
             if (sidebar.is(":visible")) {
                 sidebar.toggleClass("sidebar-open")
