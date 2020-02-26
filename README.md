@@ -1,4 +1,4 @@
-# [Demo](https://chaochaogege.com)
+# [Demo](https://n.chaochaogege.com)
 
 **这个主题支持的功能都是我能用到的，其余的功能没有添加，如果你觉着缺少一个功能，你可以在`issues`里告诉我，我会添加上**
 
