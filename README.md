@@ -29,3 +29,13 @@ git clone https://github.com/iamwwc/there
 - disqus 评论系统
 
 - favicon 浏览器Tab标签页上的小图标
+
+### 注意
+
+如果发现首页上半部分白屏，这是由于没有放置背景图导致的
+
+你需要在创建 `source/images/`，并在 `images/`文件夹下放置名为 `backgroundimg.jpg`的背景图
+
+如果你想要修改 `backgroundimg.jpg` 名称，你可以在如下路径文件中修改 :)
+
+`themes\there\source\css\_layout\header.scss`
