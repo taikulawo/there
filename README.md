@@ -7,7 +7,7 @@
 导航到 hexo的网站目录下
 
 ```
-npm install hexo-renderer-pug hexo-renderer-scss
+npm install hexo-renderer-pug hexo-renderer-scss --save
 ```
 
 将主题下载到你的`themes`目录下
